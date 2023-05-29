@@ -1,0 +1,23 @@
+# Docker
+*.log
+*.pid
+#Dockerfile
+#docker-compose.yml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+*.egg
+*.whl
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/

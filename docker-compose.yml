@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:80"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/dbname
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=dbname
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
